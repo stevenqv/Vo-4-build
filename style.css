@@ -1,1 +1,76 @@
-/==============MOBILE FIRST DESIGN==================/
+/*==============MOBILE FIRST DESIGN (320 px)==================*/
+
+body{
+  font-family: tahoma, sans-serif;
+  background-color: azure;
+  color: midnightblue;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*===Headers & Tagline===*/
+header {
+  background: url(https://studiopigeon.com/wp-content/uploads/2023/05/1-6.jpg);
+  background-size: cover;
+  padding: 4rem 2rem 4rem;
+}
+
+.box-header{
+  background-color: azure;
+  border: 5px solid midnightblue;
+}
+
+h1,
+.tagline{
+  font-family: Verdana, sans-serif;
+  text-align: center;
+}
+
+h1{
+  font-size: 2rem;
+  margin-bottom: 0rem;
+}
+
+header hr{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.tagline{
+  font-size: 10px;
+  color: mediumblue;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*===Navigation===*/
+
+nav ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  background-color: midnightblue;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a{
+  font-family: verdana;
+  text-decoration: none;
+  text-align: center;
+  font-weight:bold;
+  display: block;
+  padding: 0.5rem;
+  color: white;
+}
+
+nav a:hover{
+  background-color: skyblue;
+  color: midnightblue;
+}
