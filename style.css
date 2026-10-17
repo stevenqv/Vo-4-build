@@ -1,4 +1,4 @@
-/*==============MOBILE FIRST DESIGN (320 px)==================*/
+/*==============MOBILE FIRST DESIGN==================*/
 
 body {
   font-family: tahoma, sans-serif;
@@ -10,7 +10,7 @@ body {
 img {
   display: block;
   width: 100%;
-  height: auto;
+  margin: auto;
 }
 
 /*===Headers & Tagline===*/
@@ -33,7 +33,7 @@ h1,
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-bottom: 0rem;
   color: midnightblue;
 }
@@ -45,7 +45,7 @@ header hr {
 }
 
 .tagline {
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -127,6 +127,7 @@ main p {
   border: 6px solid midnightblue;
   padding: 1rem;
   background-color: white;
+  overflow: hidden;
 }
 
 .fundamental-cards img,
@@ -134,4 +135,52 @@ main p {
 .animations-cards img {
   border: 3px solid dodgerblue;
   border-radius: 10px;
+  object-fit: cover;
+  height: 150px;
+  text-align: center;
+}
+
+/*====Footer====*/
+footer {
+  margin: 1rem 2rem 1rem 2rem;
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/*==============MEDIUM SCREEN DESIGN==================*/
+@media (min-width: 650px) {
+  h1{
+    font-size: 2.5rem;
+  }
+
+  .tagline{
+    font-size: 18px;
+  }
+
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav a{
+    font-size: 14px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .page-layout {
+    margin: 1rem 2rem 1rem 2rem;
+  }
+
+  .fundamental-grid,
+  .types-grid,
+  .animations-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer{
+    font-size: 13px;
+  }
 }
