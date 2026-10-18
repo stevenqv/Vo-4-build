@@ -142,6 +142,7 @@ main a:hover{
 
 .text {
   padding: 1rem;
+  text-overflow: ellipsis;
 }
 
 .card-contents img {
@@ -151,6 +152,23 @@ main a:hover{
   height: 150px;
   max-width: 100%;
   text-align: center;
+}
+
+/*====Aside====*/
+
+aside {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+aside h2{
+  font-size: 20px;
+}
+
+aside p, aside li {
+  font-size: 12px;
 }
 
 /*====Footer====*/
@@ -215,7 +233,12 @@ footer {
 }
 
 /*==============LARGE SCREEN DESIGN==================*/
-@media (min-width: 950px) {
+@media (min-width: 1050px) {
+  .page-layout {
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+  }
+  
   h1{
     font-size: 4rem;
   }
@@ -224,8 +247,11 @@ footer {
     font-size: 22px;
   }
 
-    .card-contents {
-    width: 20%;
-    margin: 0.25rem;
+  .card-contents {
+    width: 24%;
+  }
+
+  aside {
+    align-self: start;
   }
 }
