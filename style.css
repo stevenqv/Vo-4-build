@@ -10,7 +10,7 @@ body {
 img {
   display: block;
   width: 100%;
-  margin: auto;
+  height: auto;
 }
 
 /*===Headers & Tagline===*/
@@ -123,10 +123,15 @@ main a:hover{
 
 /*========Card Sections=========*/
 
-.fundamental-cards,
-.subject-cards,
-.animations-cards {
+.card-row {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.card-contents {
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   border: 8px ridge midnightblue;
   padding: 1rem;
@@ -135,13 +140,16 @@ main a:hover{
   overflow: hidden;
 }
 
-.fundamental-cards img,
-.subject-cards img,
-.animations-cards img {
+.text {
+  padding: 1rem;
+}
+
+.card-contents img {
   border: 3px solid dodgerblue;
   border-radius: 10px;
   object-fit: cover;
   height: 150px;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -158,7 +166,7 @@ footer {
 
 /*==============VERTICAL TABLET SCREEN DESIGN==================*/
 
-@media (min-width: 590px) {
+@media (min-width: 630px) {
     h1{
     font-size: 2.25rem;
   }
@@ -169,11 +177,6 @@ footer {
 
   .page-layout {
     margin: 1rem 2rem 1rem 2rem;
-  }
-
-  .fundamental-grid,
-  .animations-grid {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -199,6 +202,16 @@ footer {
     padding-left: 1rem;
   }
   
+  .card-row {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .card-contents {
+    width: 40%;
+    margin: 0.25rem;
+    flex-grow: 9
+  }
 }
 
 /*==============LARGE SCREEN DESIGN==================*/
@@ -211,8 +224,8 @@ footer {
     font-size: 22px;
   }
 
-  .fundamental-grid,
-  .subject-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    .card-contents {
+    width: 20%;
+    margin: 0.25rem;
   }
 }
