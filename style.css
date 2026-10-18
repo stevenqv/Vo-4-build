@@ -99,6 +99,10 @@ h2 {
   text-transform: uppercase;
 }
 
+main h2 {
+  margin-top: 2rem;
+}
+
 h3 {
   font-size: 22px;
 }
@@ -108,8 +112,9 @@ h4 {
   color: dodgerblue;
 }
 
-main p {
+main p, main li {
   line-height: 1.5rem;
+  font-size: 14px;
 }
 
 main a{
