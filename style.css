@@ -123,18 +123,14 @@ main a:hover{
 
 /*========Card Sections=========*/
 
-.fundamental-grid,
-.subject-grid, 
-.animations-grid {
-  display: flex;
-  flex-direction: column;
-}
-
 .fundamental-cards,
 .subject-cards,
 .animations-cards {
+  display: flex;
+  flex-direction: column;
   border: 8px ridge midnightblue;
   padding: 1rem;
+  margin-top: 1rem;
   background-color: white;
   overflow: hidden;
 }
