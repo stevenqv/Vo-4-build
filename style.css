@@ -22,7 +22,7 @@ header {
 
 .box-header {
   background-color: azure;
-  border: 6px solid midnightblue;
+  border: 8px ridge midnightblue;
   opacity: 0.85;
 }
 
@@ -41,7 +41,8 @@ h1 {
 header hr {
   margin-left: 1rem;
   margin-right: 1rem;
-  color: midnightblue;
+  border: 1.5px solid midnightblue;
+  border-radius: 6px;
 }
 
 .tagline {
@@ -69,7 +70,7 @@ nav a {
   font-weight:bold;
   display: block;
   padding: 0.5rem;
-  color: white;
+  color: azure;
 }
 
 nav a:hover {
@@ -111,27 +112,35 @@ main p {
   line-height: 1.5rem;
 }
 
+main a{
+  color: mediumblue;
+}
+
+main a:hover{
+  color:azure;
+  background-color: mediumblue;
+}
+
 /*========Card Sections=========*/
 
 .fundamental-grid,
-.types-grid, 
+.subject-grid, 
 .animations-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .fundamental-cards,
-.types-cards,
+.subject-cards,
 .animations-cards {
-  border: 6px solid midnightblue;
+  border: 8px ridge midnightblue;
   padding: 1rem;
   background-color: white;
   overflow: hidden;
 }
 
 .fundamental-cards img,
-.types-cards img,
+.subject-cards img,
 .animations-cards img {
   border: 3px solid dodgerblue;
   border-radius: 10px;
@@ -142,16 +151,40 @@ main p {
 
 /*====Footer====*/
 footer {
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 3rem 0rem 0rem 0rem;
+  padding: 1rem 2rem 1rem 2rem;
   text-align: center;
   font-size: 12px;
   font-style: italic;
+  background-color: midnightblue;
+  color: azure;
+}
+
+/*==============VERTICAL TABLET SCREEN DESIGN==================*/
+
+@media (min-width: 590px) {
+    h1{
+    font-size: 2.25rem;
+  }
+
+  .tagline{
+    font-size: 14px;
+  }
+
+  .page-layout {
+    margin: 1rem 2rem 1rem 2rem;
+  }
+
+  .fundamental-grid,
+  .animations-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*==============MEDIUM SCREEN DESIGN==================*/
-@media (min-width: 650px) {
+@media (min-width: 760px) {
   h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .tagline{
@@ -170,17 +203,20 @@ footer {
     padding-left: 1rem;
   }
   
-  .page-layout {
-    margin: 1rem 2rem 1rem 2rem;
+}
+
+/*==============LARGE SCREEN DESIGN==================*/
+@media (min-width: 950px) {
+  h1{
+    font-size: 4rem;
+  }
+
+  .tagline {
+    font-size: 22px;
   }
 
   .fundamental-grid,
-  .types-grid,
-  .animations-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  footer{
-    font-size: 13px;
+  .subject-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
